@@ -4,7 +4,7 @@
   "description": "for ui prototype preparation,only apply to client",
   "main": "index.js",
   "scripts": {
-    "dev": "set NODE_ENV=development && node build/dev-server.js"
+    "dev": "set NODE_ENV=development&& node build/dev-server.js"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,10 @@
     "url": "https://github.com/kcikkick/vue2.0-webpack-forUIPrototype/issues"
   },
   "homepage": "https://github.com/kcikkick/vue2.0-webpack-forUIPrototype#readme",
-  "dependencies":{
+  "dependencies": {
     "vue": "^2.2.1"
   },
-  "devDependencies":{
+  "devDependencies": {
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -80,7 +80,8 @@
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.7",
-    "vue-loader": "^11.0.0",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^11.3.4",
     "vue-style-loader": "^2.0.0",
     "vue-template-compiler": "^2.2.1",
     "webpack": "^2.2.1",

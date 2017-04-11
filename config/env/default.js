@@ -1,14 +1,15 @@
 'use strict';
+const path = require('path')
 
 module.exports={
     dist: {
-    env: require('./prod'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    productionSourceMap: true,
-    productionGzip: false,
-    productionGzipExtensions: ['js', 'css']
+      env: require('./prod'),
+      assetsRoot: path.resolve(__dirname, '../dist'),
+      assetsSubDirectory: 'static',
+      assetsPublicPath: '/',
+      productionSourceMap: true,
+      productionGzip: false,
+      productionGzipExtensions: ['js', 'css']
   },
   build: {
     env: require('./prod'),
@@ -27,21 +28,28 @@ module.exports={
     // View the bundle analyzer report after build finishes:
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
-    bundleAnalyzerReport: process.env.npm_config_report
+    bundleAnalyzerReport: process.env.npm_config_report,
+    fileName:'[name].[hash].js',
+    chunkFilename:'[name].[hash].js'
   },
   dev: {
     env: require('./development'),
     port: 5656,
     autoOpenBrowser: true,
+    assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: 'http://localhost:5656/',
     proxyTable: {},
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
-    cssSourceMap: false
+    cssSourceMap: false,
+    fileName:'[name]-[hash].js',
+    chunkFilename:'[name]-[hash].js'
   },
   favicon: 'static/favicon.ico',
+  host:'',
+  
 }

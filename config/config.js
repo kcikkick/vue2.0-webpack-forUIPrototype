@@ -5,6 +5,7 @@
  * Module dependencies.
  */
 var _ = require('lodash'),
+   glob = require('glob'),
   path = require('path');
 
 
@@ -51,15 +52,16 @@ var getGlobbedPaths = function (globPatterns, excludes) {
 
 var initGlobalConfigFiles = function (config, assets) {
   // Setting Globbed test files
-  config.files.client.entries = getGlobbedPaths(assets.client.entries);
+  config.entries = getGlobbedPaths(assets.client.entries);
 }
 
 var initGlobalConfig = function () {
   const config={};
      // Get the default assets
   var defaultAssets = require(path.join(process.cwd(), 'config/assets/default'));
-
-
+  console.log('-----');
+  console.log('nick entry path: '+ JSON.stringify(defaultAssets));
+  console.log('-----');
   // Initialize global globbed files
   initGlobalConfigFiles(config, defaultAssets);
 
