@@ -7,11 +7,13 @@
 <script>
 
 export default{
+    name:'home',
     data(){
         return {
             title:'Home PAGE'
         }
-    },methods: {
+    },
+    methods: {
         clickButton:function(){
             this.title='change home page';
         }
