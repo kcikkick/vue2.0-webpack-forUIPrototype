@@ -2,6 +2,26 @@
 The frame designed  for  UI prototype demo with ES6 grammar
 
 
+
+
+## Access:
+
+
+``` bash
+# install dependencies
+npm install
+
+# if your network has limitation on npm.org, you may change the npm registry to your nearby vendor. e.g.
+npm config set registry https://registry.npm.taobao.org/
+
+# serve with hot reload at localhost:5656, you may change the port under config/env/default.js
+npm run dev
+
+
+http://localhost:5656/app.html
+
+http://localhost:5656/home.html
+
 ## build:
 
 

@@ -15,7 +15,7 @@ module.exports= function(entries){
                 template: 'index.html',
                 filename: fileName,
                 chunks: chunksName,
-                inject: 'body'
+                inject: 'true'
             })
         );
     });

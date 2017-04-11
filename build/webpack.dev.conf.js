@@ -34,16 +34,16 @@ module.exports = function (entries){
       new webpack.NoErrorsPlugin(),
 
       // https://github.com/ampedandwired/html-webpack-plugin
-      new HtmlWebpackPlugin({
+      /**new HtmlWebpackPlugin({
         filename: 'app.html',
         template: 'index.html',
         chunks: ['app'],
         inject: true
-      }),
+      }),**/
       new FriendlyErrorsPlugin()
     ]
   });
-  //mergerConfig.plugins.push.apply(mergerConfig.plugins, htmlPluginConfig);
+  mergerConfig.plugins.push.apply(mergerConfig.plugins, htmlPluginConfig(entries));
 
   //console.log()
 

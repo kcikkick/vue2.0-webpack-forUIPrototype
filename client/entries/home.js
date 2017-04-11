@@ -7,5 +7,5 @@ new Vue({
   el: '#app',
   //template: '<App/>',
   //components: {Home}
-  render: (h) => h(App)
+  render: (h) => h(Home)
 })
